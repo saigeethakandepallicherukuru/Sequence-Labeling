@@ -1,0 +1,25 @@
+Assignment 3 Report
+
+Name: Sai Geetha Kandepalli Cherukuru
+
+1. If you included files other than baseline_crf.py, advanced_crf.py, evaluate_model.py, and hw3_corpus_tool.py, or modified hw3_corpus_tool.py please describe what the files do and/or your modifications to hw3_corpus_tool.py.
+
+	I have used the code from hw3_corpus_tool.py for getting utterances from csv files in baseline_crf, advanced_crf and evaluate_model.py.
+
+2. Describe how you evaluated your baseline and advanced features
+	
+	For baseline and advanced, crfsuite was trained over INPUTDIR (entire labeled data) and crfsuite was made to predict the labels of test directory (25% data). evaluate_model script was used to count the number of matching labels between the output files generated and actual labels of labeled data on the local machine. And finally accuracy was calculated for evaluation. Accuracy=(labels_matched/total_no_of_labels)*100%.
+		
+25% of training data was moved to test/development directory. Out of 1076 files, 269 were chosen manually and copied them over to development directory. 
+
+3. Describe your advanced feature set.
+
+	The accuracy of basic feature set was enhanced by generating and adding the bigrams (for both tokens and POS list) to the feature list (using ngrams from nltk). 
+
+4. If you tried alternate advanced feature sets, please describe them.
+	
+	No
+
+5. Accuracy of baseline features was: 78.07%
+
+6. Accuracy of advanced features was: 81.46%
